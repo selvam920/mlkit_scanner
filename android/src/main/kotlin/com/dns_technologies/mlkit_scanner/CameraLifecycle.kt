@@ -18,11 +18,6 @@ class CameraLifecycle : LifecycleOwner {
         lifecycleRegistry.currentState = Lifecycle.State.CREATED
     }
 
-    public override fun onStart() {
-        super.onStart()
-        lifecycleRegistry.markState(Lifecycle.State.STARTED)
-    }
-
     override fun getLifecycle(): Lifecycle {
         return lifecycleRegistry
     }
