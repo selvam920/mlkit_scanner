@@ -19,7 +19,7 @@ class CameraLifecycle : LifecycleOwner {
     }
 
     override fun getLifecycle(): Lifecycle {
-        return mLifecycleRegistry
+        return lifecycleRegistry
     }
 
     /** Invoke after initialisation or pause camera */
