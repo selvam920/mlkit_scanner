@@ -13,14 +13,18 @@ import androidx.lifecycle.LifecycleRegistry
  */
 class CameraLifecycle : LifecycleOwner {
     private var lifecycleRegistry: LifecycleRegistry = LifecycleRegistry(this)
+     
+    final override val lifecycle: Lifecycle = lifecycleRegistry
 
     init {
         lifecycleRegistry.currentState = Lifecycle.State.CREATED
     }
 
+/**
     override fun getLifecycle(): Lifecycle {
         return lifecycleRegistry
     }
+     */
 
     /** Invoke after initialisation or pause camera */
     fun resume() {
